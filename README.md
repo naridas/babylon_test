@@ -5,8 +5,11 @@
 Our client is an online marketplace, here is a sample of some of the products available on our site:
 
 Productcode |Name |Price­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
+
 001 |Lavenderheart |£9.25
+
 002 |Personalisedcufflinks|£45.00
+
 003 |KidsT­shirt |£19.95
 
 Our marketing team want to offer promotions as an incentive for our customers to purchase these items.
@@ -31,8 +34,13 @@ looking for candidates to demonstrate their knowledge of TDD.
 Testdata
 ­­­­­­­­­
 Basket:001,002,003
+
 Total price expected:£66.78
+
 Basket:001,003,001
+
 Total price expected:£36.95
+
 Basket:001,002,001,003
+
 Total price expected:£73.76
