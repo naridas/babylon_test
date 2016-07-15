@@ -4,7 +4,7 @@
 
 Our client is an online marketplace, here is a sample of some of the products available on our site:
 
-Productcode |Name |Price­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
+Productcode |Name |Price
 
 001 |Lavenderheart |£9.25
 
@@ -32,7 +32,7 @@ Implement a checkout system that fulfills these requirements. Do this outside of
 looking for candidates to demonstrate their knowledge of TDD.
 
 Testdata
-­­­­­­­­­
+
 Basket:001,002,003
 
 Total price expected:£66.78
