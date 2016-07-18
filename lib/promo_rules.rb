@@ -1,7 +1,9 @@
 class PromoRules
   PROMO_60 = 60
-  PROMO_001 = 2
   TEN_PERCENT_OFF = 0.9
+  PROMO_001_ITEMS = 2
+  PROMO_001_PRODUCT_CODE = "001"
+  PROMO_001_NEW_PRICE = 8.50
 
   def change_price(basket)
     return change_price_001(basket) if two_plus_001?(basket)
@@ -14,12 +16,12 @@ class PromoRules
   end
 
 	def two_plus_001?(basket)
-		basket.count{|product| product_001?(product)} >= PROMO_001
+		basket.count{|product| product_001?(product)} >= PROMO_001_ITEMS
 	end
 
   def change_price_001(basket)
     basket.map do |product|
-      product.price = 8.50 if product_001?(product)
+      product.price = PROMO_001_NEW_PRICE if product_001?(product)
       product
     end
   end
@@ -39,6 +41,6 @@ class PromoRules
   end
 
   def product_001?(product)
-    product.product_code == 001
+    product.product_code == PROMO_001_PRODUCT_CODE 
   end
 end

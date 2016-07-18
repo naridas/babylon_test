@@ -1,8 +1,9 @@
 require 'promo_rules'
+require 'product'
 
 describe PromoRules do
-  let(:product_001) { instance_double "product_001", price:9.25, product_code:001 }
-  let(:product_002) { instance_double "product_002", price:45.00, product_code:002 }
+  let(:product_001) { instance_spy "product_001", price:9.25, product_code:"001" }
+  let(:product_002) { instance_spy "product_002", price:45.00, product_code:"002" }
   subject(:promo_rules) { described_class.new }
   context "Promo Rules 2+ lavender hearts" do
     it "2+ lavender hearts return true" do
