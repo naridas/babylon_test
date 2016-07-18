@@ -1,8 +1,8 @@
 require 'promo_rules'
 
 describe PromoRules do
-  let(:product_001) { double :product, price:9.25, product_code:001}
-  let(:product_002) { double :other_station, price:45.00, product_code:002 }
+  let(:product_001) { instance_double "product_001", price:9.25, product_code:001 }
+  let(:product_002) { instance_double "product_002", price:45.00, product_code:002 }
   subject(:promo_rules) { described_class.new }
   context "Promo Rules 2+ lavender hearts" do
     it "2+ lavender hearts return true" do
@@ -27,14 +27,14 @@ describe PromoRules do
       basket = [product_001, product_001, product_002]
       allow(product_001).to receive(:price=)
       allow(product_001).to receive(:price).and_return(8.50)
-      expect(promo_rules.change_price_promo_001(basket)).to eq [product_001, product_001, product_002]
+      expect(promo_rules.change_price(basket)).to eq [product_001, product_001, product_002]
       expect(product_001.price).to eq 8.50
     end
 
     it "less than 2 lavender hearts return basket" do
       basket = [product_001, product_002]
       allow(product_001).to receive(:price=)
-      expect(promo_rules.change_price_promo_001(basket)).to eq [product_001, product_002]
+      expect(promo_rules.change_price(basket)).to eq [product_001, product_002]
       expect(product_001.price).to eq 9.25
     end
   end
@@ -57,12 +57,12 @@ describe PromoRules do
 
     it "calculates new total price if over £60" do
       basket = [product_002, product_002]
-      expect(promo_rules.calculate_promo_60(basket)).to eq 81
+      expect(promo_rules.calculate_total_price(basket)).to eq 81
     end
 
     it "returns normal total price if less then £60" do
       basket = [product_002]
-      expect(promo_rules.calculate_promo_60(basket)).to eq 45
+      expect(promo_rules.calculate_total_price(basket)).to eq 45
     end
   end
 

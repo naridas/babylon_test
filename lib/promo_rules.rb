@@ -3,14 +3,14 @@ class PromoRules
   PROMO_001 = 2
   TEN_PERCENT_OFF = 0.9
 
-  def change_price_promo_001(basket)
+  def change_price(basket)
     return change_price_001(basket) if two_plus_001?(basket)
     basket
   end
 
-  def calculate_promo_60(basket)
-    return ten_percent_off_total(basket) if over60?(basket)
-    basket_sum(basket)
+  def calculate_total_price(basket)
+    return ten_percent_off_total(basket).round(2) if over60?(basket)
+    basket_sum(basket).round(2)
   end
 
 	def two_plus_001?(basket)

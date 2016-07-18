@@ -1,7 +1,7 @@
 require 'product'
 
 describe Product do
-  subject(:product) {described_class.new(product_code:001, name:"Lavenderheart", price:9.25)}
+  subject(:product) { described_class.new(product_code:001, name:"Lavenderheart", price:9.25) }
 
   context "when initializing" do
     it "has product_code argument 001" do
