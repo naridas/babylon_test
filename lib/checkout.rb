@@ -9,7 +9,7 @@ class Checkout
     @promo_rules = promo_rules || PromoRules.new
     @checkout_view = checkout_view || CheckoutView
     @basket = []
-    @total_price = ""
+    @total_price = 0
   end
 
   def scan(product)

@@ -35,7 +35,6 @@ describe "Checkout feature tests", feature: true do
       checkout.total
       allow(STDOUT).to receive(:puts).with("Basket: 001,002,001,003\nTotal price expected: £73.76\n")
       checkout.print_checkout
-      # expect(checkout.print_checkout).to eq "£73.76"
     end
   end
 end

@@ -19,8 +19,8 @@ describe Checkout do
   end
 
   it "Put out checkout view" do
-    allow(checkout_view).to receive(:new).with(basket:[product_001], total_price:10).and_return(:checkout_view)
-    allow(checkout_view).to receive(:view).and_return("checkout_view")
+    allow(checkout_view).to receive(:new).with(basket:[], total_price:0).and_return(checkout_view)
+    # allow(checkout_view).to receive(:view).and_return("checkout_view")
     checkout.print_checkout
     output = spy(:output)
     expect(output).to have_received(:puts).with("checkout_view")
