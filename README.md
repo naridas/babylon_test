@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/naridas/babylon_test.svg?branch=master)](https://travis-ci.org/naridas/babylon_test)
-[![Coverage Status](https://coveralls.io/repos/github/naridas/babylon_test/badge.svg?branch=hound%2Ctravis)](https://coveralls.io/github/naridas/babylon_test?branch=hound%2Ctravis)
+[![Coverage Status](https://coveralls.io/repos/github/naridas/babylon_test/badge.svg?branch=master)](https://coveralls.io/github/naridas/babylon_test?branch=master)
 
 
 # babylon_test
