@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/naridas/babylon_test.svg?branch=master)](https://travis-ci.org/naridas/babylon_test)
+[![Coverage Status](https://coveralls.io/repos/github/naridas/babylon_test/badge.svg)](https://coveralls.io/github/naridas/babylon_test)
+
+
 # babylon_test
 
 ## The Test
