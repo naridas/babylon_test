@@ -48,3 +48,12 @@ Total price expected:£36.95
 Basket:001,002,001,003
 
 Total price expected:£73.76
+
+## My Simplfied Thought Process
+
+- Made product class first since it is the easiest to do but will be used a lot
+- Started to work on promo rules where most of the work is done, spent a lot time here thinking if i should split it or not but decided to make it then refactor it later if necessary
+- Checkout is my interface so made it do the minimum work
+- Created a view to make my data look like the test data
+- Took out calculations from promo rules since i felt they were different responsibilities 
+- Made calculations and promo rules more flexible so you can input your own promos with similar rules
