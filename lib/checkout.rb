@@ -17,11 +17,11 @@ class Checkout
   end
 
   def total
-    @basket = @promo_rules.change_price(@basket)
-    @total_price = @promo_rules.calculate_total_price(@basket)
+    @basket = @promo_rules.bundle_price(@basket)
+    @total_price = @promo_rules.discount_price(@basket)
   end
 
   def print_checkout
-    puts @checkout_view.new(basket:basket, total_price:total_price).view
+    puts @checkout_view.new(basket:basket, total_price:total_price)._print
   end
 end

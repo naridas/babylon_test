@@ -9,7 +9,7 @@ class CheckoutView
     @total_price = total_price
   end
 
-  def view
+  def _print
     basket_line + total_price_line
   end
 

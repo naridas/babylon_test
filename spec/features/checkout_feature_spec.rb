@@ -4,9 +4,9 @@ require "product"
 describe "Checkout feature tests", feature: true do
 
   subject(:checkout) { Checkout.new }
-  let(:product_001) { Product.new(name:"Lavender heart", price:9.25, product_code:"001") }
-  let(:product_002) { Product.new(name:"Personalised cufflinks", price:45.00, product_code:"002") }
-  let(:product_003) { Product.new(name:"Kids T­-shirt", price:19.95, product_code:"003") }
+  let(:product_001) { Product.new(name:"Lavender heart", price:9.25, product_code: :"001") }
+  let(:product_002) { Product.new(name:"Personalised cufflinks", price:45.00, product_code: :"002") }
+  let(:product_003) { Product.new(name:"Kids T­-shirt", price:19.95, product_code: :"003") }
 
   context "Acceptance Tests" do
     it "total price of 001,003,001" do
