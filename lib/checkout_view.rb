@@ -1,8 +1,8 @@
 class CheckoutView
-  BASKET= "Basket: "
-  TOTAL_PRICE= "Total price expected: £"
-  NEW_LINE= "\n"
-  COMMA= ","
+  BASKET= "Basket: ".freeze
+  TOTAL_PRICE= "Total price expected: £".freeze
+  NEW_LINE= "\n".freeze
+  COMMA= ",".freeze
 
   def initialize(basket:, total_price:)
     @basket = basket
