@@ -24,7 +24,7 @@ class CheckoutView
   end
 
   def format_basket
-    @basket.map{|product| product.product_code}.join(COMMA)
+    @basket.map(&:product_code).join(COMMA)
   end
 
   def format_total
