@@ -28,6 +28,6 @@ class CheckoutView
   end
 
   def format_total
-    sprintf('%.2f', @total_price)
+    format('%.2f', @total_price)
   end
 end
