@@ -22,6 +22,6 @@ describe Calculate do
   end
 
   it "discounted price of the basket with promo" do
-    expect(calculate.discount_price(basket:@basket, spend_over:10, discount:0.05)).to eq 17.58
+    expect(calculate.discount_price(basket:@basket, spend_over:10, discount_off:0.05)).to eq 17.58
   end
 end

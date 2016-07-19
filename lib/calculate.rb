@@ -1,7 +1,14 @@
 class Calculate
+  SPEND_OVER = 60
+  DISCOUNT_OFF = 0.1
 
-  def discount_price(basket:, spend_over:, discount:)
-    return percent_off_total(basket, discount).round(2) if over?(basket, spend_over)
+  def initialize(spend_over:SPEND_OVER, discount_off:DISCOUNT_OFF)
+    @spend_over = spend_over
+    @discount_off = discount_off
+  end
+
+  def discount_price(basket:, spend_over:@spend_over, discount_off:@discount_off)
+    return percent_off_total(basket, discount_off).round(2) if over?(basket, spend_over)
     basket_sum(basket).round(2)
   end
 
@@ -9,8 +16,8 @@ class Calculate
     basket_sum(basket) > spend_over
   end
 
-  def percent_off_total(basket, discount)
-    basket_sum(basket) * (1 - discount)
+  def percent_off_total(basket, discount_off)
+    basket_sum(basket) * (1 - discount_off)
   end
 
   def basket_sum(basket)

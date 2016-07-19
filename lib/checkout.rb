@@ -8,7 +8,7 @@ class Checkout
   def initialize(promo_rules:nil, checkout_view:nil, calculate:nil)
     @promo_rules = promo_rules || PromoRules.new
     @checkout_view = checkout_view || CheckoutView
-    @calculate = calculate || Calculate
+    @calculate = calculate || Calculate.new
     @basket = []
     @total_price = 0
   end
@@ -19,9 +19,7 @@ class Checkout
 
   def total
     @basket = @promo_rules.bundle_price(@basket)
-    @total_price = @calculate.new.discount_price(basket:@basket,
-    spend_over:PromoRules::PROMO_DISCOUNT,
-    discount:PromoRules::DISCOUNT_OFF )
+    @total_price = @calculate.discount_price(basket:@basket)
   end
 
   def print_checkout
