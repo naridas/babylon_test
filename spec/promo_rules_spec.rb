@@ -39,32 +39,4 @@ describe PromoRules do
       expect(product_001.price).to eq 9.25
     end
   end
-
-  context "Promo Rules over £60" do
-    it "over £60 return true" do
-      basket = [product_002, product_002]
-      expect(promo_rules.over60?(basket)).to eq true
-    end
-
-    it "over £60 return false" do
-      basket = [product_002]
-      expect(promo_rules.over60?(basket)).to eq false
-    end
-
-    it "ten percent off" do
-      basket = [product_002]
-      expect(promo_rules.ten_percent_off_total(basket)).to eq 40.5
-    end
-
-    it "calculates new total price if over £60" do
-      basket = [product_002, product_002]
-      expect(promo_rules.discount_price(basket)).to eq 81
-    end
-
-    it "returns normal total price if less then £60" do
-      basket = [product_002]
-      expect(promo_rules.discount_price(basket)).to eq 45
-    end
-  end
-
 end

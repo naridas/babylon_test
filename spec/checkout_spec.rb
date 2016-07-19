@@ -13,7 +13,6 @@ describe Checkout do
   it "Get total price" do
     checkout.scan(product_001)
     allow(promo_rules).to receive(:bundle_price).and_return([product_001])
-    allow(promo_rules).to receive(:discount_price).and_return(9.25)
     expect(checkout.total).to eq 9.25
   end
 
