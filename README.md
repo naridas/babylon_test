@@ -49,6 +49,16 @@ Basket:001,002,001,003
 
 Total price expected:£73.76
 
+## Set up
+
+- git clone
+- bundle
+- rspec (to get tests)
+ 
+## Technology used
+
+Ruby, Rspec, Hound, Travis, Coveralls
+
 ## My Simplfied Thought Process
 
 - Made product class first since it is the easiest to do but will be used a lot
